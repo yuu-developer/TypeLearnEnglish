@@ -1,5 +1,10 @@
 **TypeLearnEnglish**
 
+### ER図
+[![Image from Gyazo](https://i.gyazo.com/442335590a7a924fd654d6f1abde52a7.png)](https://gyazo.com/442335590a7a924fd654d6f1abde52a7)
+[https://drive.google.com/file/d/1AHxYXiYe1BUc8_1zXXqy9COrBLyvarhV/view?usp=sharing](https://gyazo.com/442335590a7a924fd654d6f1abde52a7)
+
+
 ### 画面遷移図
 [Figma：https://xxxxxxxxxxxx](https://www.figma.com/file/E8oclVxsnY1ezo29bybHPX/TypeLearnEnglish?type=design&node-id=0%3A1&mode=design&t=CuYP1qQcBLvYesrZ-1)
 
