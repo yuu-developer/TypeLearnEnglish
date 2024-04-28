@@ -1,7 +1,7 @@
 **TypeLearnEnglish**
 
 ### ER図
-[![Image from Gyazo](https://i.gyazo.com/442335590a7a924fd654d6f1abde52a7.png)](https://gyazo.com/442335590a7a924fd654d6f1abde52a7)
+[![Image from Gyazo](https://i.gyazo.com/2df60782b52fee422485b8401498e891.png)](https://gyazo.com/2df60782b52fee422485b8401498e891)
 [https://drive.google.com/file/d/1AHxYXiYe1BUc8_1zXXqy9COrBLyvarhV/view?usp=sharing](https://gyazo.com/442335590a7a924fd654d6f1abde52a7)
 
 
