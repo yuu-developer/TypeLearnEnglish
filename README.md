@@ -1,8 +1,8 @@
 **TypeLearnEnglish**
 
 ### ER図
-[![Image from Gyazo](https://i.gyazo.com/2df60782b52fee422485b8401498e891.png)](https://gyazo.com/2df60782b52fee422485b8401498e891)
-[https://drive.google.com/file/d/1AHxYXiYe1BUc8_1zXXqy9COrBLyvarhV/view?usp=sharing](https://gyazo.com/442335590a7a924fd654d6f1abde52a7)
+[![Image from Gyazo](https://i.gyazo.com/9059a2e9bca96ee55f242e82de6ca29b.png)](https://gyazo.com/9059a2e9bca96ee55f242e82de6ca29b)
+https://drive.google.com/file/d/1AHxYXiYe1BUc8_1zXXqy9COrBLyvarhV/view?usp=sharing
 
 
 ### 画面遷移図
@@ -71,13 +71,13 @@
 - **MVPリリース時に作っていたいもの**:
     - ユーザー登録機能
     - ログイン機能
-    - プロフィール機能
     - 英文タイピング機能
     - 英文解説ページ
     - スコア計測と表示機能
 - **本リリースまでに作っていたいもの**:
     - 辞書機能
-    - **進捗ダッシュボード機能**
+    - 進捗ダッシュボード機能
+    - プロフィール機能
     - ゲストログイン機能
     - スコア共有機能
     - マルチプレイヤーモード
