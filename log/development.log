@@ -35,3 +35,15 @@ Processing by StaticpagesController#top as HTML
 Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms | Allocations: 6411)
 
 
+Started GET "/" for ::1 at 2024-05-19 16:40:45 +0900
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticpagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top.html.erb within layouts/application
+  Rendered staticpages/top.html.erb within layouts/application (Duration: 0.2ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 41.1ms | Allocations: 34531)
+Completed 200 OK in 46ms (Views: 42.7ms | ActiveRecord: 0.0ms | Allocations: 38625)
+
+
