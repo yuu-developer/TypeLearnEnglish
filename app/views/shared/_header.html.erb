@@ -1,0 +1,14 @@
+<header>
+    <nav>
+      <ul>
+        <li><%= link_to 'ホーム', root_path %></li>
+        <% if logged_in? %>
+          <li><%= button_to 'ログアウト', logout_path, method: :delete, form_class: 'logout-button', class: 'logout-button' %></li>
+          <li><%= link_to 'プロフィール', profile_path %></li>
+        <% else %>
+          <li><%= link_to 'ログイン', login_path %></li>
+          <li><%= link_to '登録', new_user_registration_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </header>

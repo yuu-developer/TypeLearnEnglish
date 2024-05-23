@@ -1,11 +1,21 @@
 Rails.application.routes.draw do
   root "staticpages#top"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
+  get 'sessions/new', as: :new_session
+  post 'sessions/create', as: :create_session  # 名前を一意に変更
+  delete 'sessions/destroy', as: :destroy_session
+  
+  get 'users/new', as: :new_user_registration
+  post 'users/create', as: :create_user
+  get 'profile', to: 'users#show', as: 'profile'
+  
+  resources :users, only: [:create]
+  resources :sessions, only: [:create, :destroy]
+
+  get 'login', to: 'sessions#new', as: :login  # 名前を保持
+  post 'login', to: 'sessions#create'  # この行を追加してPOSTリクエストを受け取る
+
+  delete 'logout', to: 'sessions#destroy', as: :logout
+  
   get "up" => "rails/health#show", as: :rails_health_check
-
-  # Defines the root path route ("/")
-  # root "posts#index"
 end

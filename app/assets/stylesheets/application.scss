@@ -1,0 +1,187 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap";
+@import "top";
+
+header {
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+footer {
+  background-color: #f8f9fa;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+}
+
+.logout-button {
+  display: inline; /* ボタンをインライン表示にする */
+  margin: 0; /* 余白をなくす */
+  padding: 0; /* 余白をなくす */
+  background: none; /* 背景をなくす */
+  border: none; /* 枠線をなくす */
+  color: #007bff; /* リンクの色に合わせる */
+  cursor: pointer; /* ポインターに変更 */
+  text-decoration: underline; /* リンクのように下線を追加 */
+  font: inherit; /* フォントを継承 */
+}
+
+.logout-button:hover {
+  text-decoration: none; /* ホバー時の装飾を削除 */
+}
+
+/* エラーメッセージのスタイル */
+#error_explanation {
+  color: #ff0000; /* テキストを赤色に */
+  background-color: #f8d7da; /* 背景色を薄い赤色に */
+  border: 1px solid #f5c2c7; /* 枠線を赤色に */
+  padding: 10px; /* パディングを追加 */
+  margin-bottom: 20px; /* 下部のマージンを追加 */
+  border-radius: 5px; /* 角を丸く */
+}
+
+#error_explanation h2 {
+  margin: 0 0 10px; /* タイトルの下にスペースを追加 */
+}
+
+#error_explanation ul {
+  list-style-type: none; /* リストのデフォルトスタイルを削除 */
+  padding: 0; /* パディングを削除 */
+}
+
+#error_explanation li {
+  margin: 0 0 5px; /* 各リストアイテムの下にスペースを追加 */
+}
+
+/* フォームフィールドのスタイル */
+.field {
+  margin-bottom: 20px; /* 各フィールドの下部にスペースを追加 */
+}
+
+.field label {
+  display: block; /* ラベルをブロック表示に */
+  font-weight: bold; /* ラベルのフォントを太字に */
+  margin-bottom: 5px; /* ラベルの下にスペースを追加 */
+}
+
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="password"] {
+  width: 100%; /* 入力フィールドを100%の幅に */
+  padding: 8px; /* 入力フィールドにパディングを追加 */
+  box-sizing: border-box; /* ボックスのサイズをボーダーとパディングを含む */
+  border: 1px solid #ccc; /* 枠線の色を薄いグレーに */
+  border-radius: 4px; /* 角を丸く */
+}
+
+.actions {
+  text-align: center; /* ボタンを中央揃えに */
+}
+
+.actions input[type="submit"] {
+  background-color: #007bff; /* ボタンの背景色を青に */
+  color: white; /* ボタンのテキストを白に */
+  border: none; /* ボタンの枠線を削除 */
+  padding: 10px 20px; /* ボタンにパディングを追加 */
+  font-size: 16px; /* ボタンのフォントサイズを調整 */
+  border-radius: 4px; /* 角を丸く */
+  cursor: pointer; /* カーソルをポインターに */
+}
+
+.actions input[type="submit"]:hover {
+  background-color: #0056b3; /* ホバー時の背景色を濃い青に */
+}
+
+/* エラーメッセージのスタイル */
+#error_explanation {
+  color: #ff0000; /* テキストを赤色に */
+  background-color: #f8d7da; /* 背景色を薄い赤色に */
+  border: 1px solid #f5c2c7; /* 枠線を赤色に */
+  padding: 10px; /* パディングを追加 */
+  margin-bottom: 20px; /* 下部のマージンを追加 */
+  border-radius: 5px; /* 角を丸く */
+}
+
+#error_explanation h2 {
+  margin: 0 0 10px; /* タイトルの下にスペースを追加 */
+}
+
+#error_explanation ul {
+  list-style-type: none; /* リストのデフォルトスタイルを削除 */
+  padding: 0; /* パディングを削除 */
+}
+
+#error_explanation li {
+  margin: 0 0 5px; /* 各リストアイテムの下にスペースを追加 */
+}
+
+/* フォームフィールドのスタイル */
+.field {
+  margin-bottom: 20px; /* 各フィールドの下部にスペースを追加 */
+}
+
+.field label {
+  display: block; /* ラベルをブロック表示に */
+  font-weight: bold; /* ラベルのフォントを太字に */
+  margin-bottom: 5px; /* ラベルの下にスペースを追加 */
+}
+
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="password"] {
+  width: 100%; /* 入力フィールドを100%の幅に */
+  padding: 8px; /* 入力フィールドにパディングを追加 */
+  box-sizing: border-box; /* ボックスのサイズをボーダーとパディングを含む */
+  border: 1px solid #ccc; /* 枠線の色を薄いグレーに */
+  border-radius: 4px; /* 角を丸く */
+}
+
+.actions {
+  text-align: center; /* ボタンを中央揃えに */
+}
+
+.actions input[type="submit"] {
+  background-color: #007bff; /* ボタンの背景色を青に */
+  color: white; /* ボタンのテキストを白に */
+  border: none; /* ボタンの枠線を削除 */
+  padding: 10px 20px; /* ボタンにパディングを追加 */
+  font-size: 16px; /* ボタンのフォントサイズを調整 */
+  border-radius: 4px; /* 角を丸く */
+  cursor: pointer; /* カーソルをポインターに */
+}
+
+.actions input[type="submit"]:hover {
+  background-color: #0056b3; /* ホバー時の背景色を濃い青に */
+}
