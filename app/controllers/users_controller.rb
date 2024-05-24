@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to root_url, notice: 'User was successfully created.'
+      redirect_to profile_url, notice: 'User was successfully created.'
     else
       render :new
     end
@@ -30,4 +30,3 @@ class UsersController < ApplicationController
     end
   end
 end
-
