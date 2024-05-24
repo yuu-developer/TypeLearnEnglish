@@ -4793,3 +4793,275 @@ Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 2172)
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3174175540968163830)[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[36mUser Load (12.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for ::1 at 2024-05-24 23:45:09 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticpagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top.html.erb within layouts/application
+  Rendered staticpages/top.html.erb within layouts/application (Duration: 0.2ms | Allocations: 201)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 444)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 96)
+  Rendered layout layouts/application.html.erb (Duration: 3296.1ms | Allocations: 97506)
+Completed 200 OK in 3302ms (Views: 3298.1ms | ActiveRecord: 0.0ms | Allocations: 101498)
+
+
+Started GET "/" for ::1 at 2024-05-24 23:45:14 +0900
+Processing by StaticpagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top.html.erb within layouts/application
+  Rendered staticpages/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1915)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 2164)
+
+
+Started GET "/" for ::1 at 2024-05-24 23:45:16 +0900
+Processing by StaticpagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top.html.erb within layouts/application
+  Rendered staticpages/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1919)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 2167)
+
+
+Started GET "/" for ::1 at 2024-05-24 23:45:22 +0900
+Processing by StaticpagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top.html.erb within layouts/application
+  Rendered staticpages/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1931)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 2179)
+
+
+Started GET "/" for ::1 at 2024-05-24 23:46:32 +0900
+Processing by StaticpagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top.html.erb within layouts/application
+  Rendered staticpages/top.html.erb within layouts/application (Duration: 0.3ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 75)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 1913)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 2157)
+
+
+Started GET "/" for ::1 at 2024-05-24 23:46:33 +0900
+Processing by StaticpagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top.html.erb within layouts/application
+  Rendered staticpages/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered shared/_footer.html.erb (Duration: 1.8ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 1919)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms | Allocations: 2167)
+
+
+Started GET "/users/new" for ::1 at 2024-05-24 23:46:34 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1908)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 3362)
+Completed 200 OK in 65ms (Views: 4.9ms | ActiveRecord: 20.9ms | Allocations: 23159)
+
+
+Started GET "/login" for ::1 at 2024-05-24 23:46:35 +0900
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2909)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 4360)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 4836)
+
+
+Started GET "/" for ::1 at 2024-05-24 23:46:36 +0900
+Processing by StaticpagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top.html.erb within layouts/application
+  Rendered staticpages/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 75)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 1906)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 2150)
+
+
+Started GET "/" for ::1 at 2024-05-24 23:48:11 +0900
+Processing by StaticpagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top.html.erb within layouts/application
+  Rendered staticpages/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 112)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 341)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 17199)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 18107)
+
+
+Started GET "/" for ::1 at 2024-05-24 23:48:45 +0900
+Processing by StaticpagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top.html.erb within layouts/application
+  Rendered staticpages/top.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 75)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 1900)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 2144)
+
+
+Started GET "/" for ::1 at 2024-05-24 23:48:48 +0900
+Processing by StaticpagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top.html.erb within layouts/application
+  Rendered staticpages/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 1906)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 2150)
+
+
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for ::1 at 2024-05-24 23:49:06 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticpagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top.html.erb within layouts/application
+  Rendered staticpages/top.html.erb within layouts/application (Duration: 0.3ms | Allocations: 205)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 437)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 42.5ms | Allocations: 47755)
+Completed 200 OK in 50ms (Views: 44.9ms | ActiveRecord: 0.0ms | Allocations: 51748)
+
+
+Started GET "/" for ::1 at 2024-05-24 23:50:31 +0900
+Processing by StaticpagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top.html.erb within layouts/application
+  Rendered staticpages/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 75)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 1911)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 2160)
+
+
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for ::1 at 2024-05-24 23:51:55 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticpagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top.html.erb within layouts/application
+  Rendered staticpages/top.html.erb within layouts/application (Duration: 0.2ms | Allocations: 205)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 437)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 5161)
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 9154)
+
+
+Started GET "/users/new" for ::1 at 2024-05-24 23:51:57 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1890)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2525)
+Completed 200 OK in 60ms (Views: 4.7ms | ActiveRecord: 16.8ms | Allocations: 22300)
+
+
+Started GET "/login" for ::1 at 2024-05-24 23:51:58 +0900
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2898)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 63)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3532)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 4011)
+
+
+Started GET "/" for ::1 at 2024-05-24 23:51:59 +0900
+Processing by StaticpagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top.html.erb within layouts/application
+  Rendered staticpages/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1083)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 1331)
+
+
+Started GET "/" for ::1 at 2024-05-24 23:52:07 +0900
+Processing by StaticpagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top.html.erb within layouts/application
+  Rendered staticpages/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1104)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 1348)
+
+
+Started GET "/" for ::1 at 2024-05-24 23:53:12 +0900
+Processing by StaticpagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top.html.erb within layouts/application
+  Rendered staticpages/top.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1092)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 1336)
+
+
+Started GET "/" for ::1 at 2024-05-24 23:53:13 +0900
+Processing by StaticpagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top.html.erb within layouts/application
+  Rendered staticpages/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 75)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1092)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 1340)
+
+
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for ::1 at 2024-05-24 23:53:35 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticpagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top.html.erb within layouts/application
+  Rendered staticpages/top.html.erb within layouts/application (Duration: 0.2ms | Allocations: 205)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 437)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 5155)
+Completed 200 OK in 11ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 9148)
+
+
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for ::1 at 2024-05-24 23:53:57 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticpagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top.html.erb within layouts/application
+  Rendered staticpages/top.html.erb within layouts/application (Duration: 0.2ms | Allocations: 205)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 437)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 5152)
+Completed 200 OK in 13ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 9145)
+
+
