@@ -4782,3 +4782,14 @@ Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 2172)
   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
 [dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
 [dotenv] Loaded [33m.env[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE DATABASE "postgre_yuu_plvd" ENCODING = 'unicode'[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE DATABASE "postgre_yuu_plvd" ENCODING = 'unicode'[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3174175540968163830)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Update (1.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'development', "updated_at" = '2024-05-24 05:35:31.939132' WHERE "ar_internal_metadata"."key" = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3174175540968163830)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (12.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
