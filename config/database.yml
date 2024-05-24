@@ -38,20 +38,24 @@ default: &default
 
 development:
   <<: *default
-  database: your_development_database_name
-  username: your_development_database_user
-  password: your_development_database_password
-
-test:
-  <<: *default
-  database: your_test_database_name
-  username: your_test_database_user
-  password: your_test_database_password
-
-production:
-  <<: *default
-  host: <%= ENV['DATABASE_HOST'] %>
-  port: <%= ENV.fetch('DATABASE_PORT', 5432) %>
   database: <%= ENV['DATABASE_NAME'] %>
   username: <%= ENV['DATABASE_USER'] %>
   password: <%= ENV['DATABASE_PASSWORD'] %>
+  host: <%= ENV['DATABASE_HOST'] %>
+  port: <%= ENV['DATABASE_PORT'] %>
+
+test:
+  <<: *default
+  database: <%= ENV['DATABASE_NAME'] %>
+  username: <%= ENV['DATABASE_USER'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  host: <%= ENV['DATABASE_HOST'] %>
+  port: <%= ENV['DATABASE_PORT'] %>
+
+production:
+  <<: *default
+  database: <%= ENV['DATABASE_NAME'] %>
+  username: <%= ENV['DATABASE_USER'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  host: <%= ENV['DATABASE_HOST'] %>
+  port: <%= ENV['DATABASE_PORT'] %>
