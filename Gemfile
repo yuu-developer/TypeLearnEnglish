@@ -34,6 +34,7 @@ gem 'sorcery'
 
 gem 'sassc-rails'
 
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
@@ -77,3 +78,5 @@ end
 gem "cssbundling-rails", "~> 1.4"
 
 gem "dartsass-rails", "~> 0.5.0"
+
+gem "bcrypt", "~> 3.1"
