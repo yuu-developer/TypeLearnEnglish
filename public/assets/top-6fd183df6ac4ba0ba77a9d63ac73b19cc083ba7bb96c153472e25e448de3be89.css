@@ -1,0 +1,26 @@
+/* line 1, app/assets/stylesheets/top.scss */
+.top-wrapper {
+  background-image: url(/assets/main-837463dcfd5c5bfb6133e7bc3c9d2a1e09cecf6b57982b920c8e7f9ee3ecdf59.jpg);
+  height: calc(100vh - 134px);
+  position: relative;
+  background-position: center;
+}
+
+/* line 7, app/assets/stylesheets/top.scss */
+.top-wrapper .top-inner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 7, app/assets/stylesheets/top.scss */
+  .top-wrapper .top-inner-text {
+    font-size: 2rem;
+  }
+}
