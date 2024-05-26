@@ -11926,3 +11926,406 @@ Processing by PracticesController#new_word as */*
 Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3108)
 
 
+Started GET "/" for ::1 at 2024-05-26 15:59:15 +0900
+Processing by StaticpagesController#top as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top_logged_in.html.erb within layouts/application
+  Rendered staticpages/top_logged_in.html.erb within layouts/application (Duration: 0.5ms | Allocations: 181)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 154)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 917)
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 0.6ms | Allocations: 2257)
+
+
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for ::1 at 2024-05-26 15:59:47 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticpagesController#top as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top_logged_in.html.erb within layouts/application
+  Rendered staticpages/top_logged_in.html.erb within layouts/application (Duration: 0.3ms | Allocations: 407)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 456)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 3749)
+Completed 200 OK in 48ms (Views: 6.8ms | ActiveRecord: 15.6ms | Allocations: 32736)
+
+
+Started GET "/practices/new" for ::1 at 2024-05-26 15:59:51 +0900
+Processing by PracticesController#new as HTML
+  [1m[36mArticle Pluck (0.8ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/practices_controller.rb:4:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering practices/new.html.erb within layouts/application
+  Rendered practices/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2404)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 583)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 3559)
+Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 2.5ms | Allocations: 6843)
+
+
+Started POST "/practices" for ::1 at 2024-05-26 15:59:58 +0900
+Processing by PracticesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "difficulty_level"=>"medium", "commit"=>"Start"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/practices_controller.rb:9:in `create'
+  [1m[36mPractice Create (1.1ms)[0m  [1m[32mINSERT INTO "practices" ("user_id", "start_time", "end_time", "score", "difficulty_level", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 3], ["start_time", "2024-05-26 06:59:58.099577"], ["end_time", nil], ["score", nil], ["difficulty_level", "medium"], ["created_at", "2024-05-26 06:59:58.107974"], ["updated_at", "2024-05-26 06:59:58.107974"]]
+  ↳ app/controllers/practices_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/practices_controller.rb:9:in `create'
+Redirected to http://localhost:3000/practices/58
+Completed 302 Found in 15ms (ActiveRecord: 5.5ms | Allocations: 15261)
+
+
+Started GET "/practices/58" for ::1 at 2024-05-26 15:59:58 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"58"}
+  [1m[36mPractice Load (0.4ms)[0m  [1m[34mSELECT "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:17:in `show'
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."difficulty_level" = $1 ORDER BY RANDOM() LIMIT $2[0m  [["difficulty_level", "medium"], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:18:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 419)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 2027)
+Completed 200 OK in 8ms (Views: 1.5ms | ActiveRecord: 2.1ms | Allocations: 9403)
+
+
+Started GET "/correct.mp3" for ::1 at 2024-05-26 15:59:58 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/correct.mp3"):
+  
+Started GET "/practices/new_word?difficulty_level=medium" for ::1 at 2024-05-26 15:59:58 +0900
+Processing by PracticesController#new_word as */*
+  Parameters: {"difficulty_level"=>"medium"}
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."difficulty_level" = $1 ORDER BY RANDOM() LIMIT $2[0m  [["difficulty_level", "medium"], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:22:in `new_word'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 1776)
+
+
+Started GET "/" for ::1 at 2024-05-26 15:59:59 +0900
+Processing by StaticpagesController#top as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top_logged_in.html.erb within layouts/application
+  Rendered staticpages/top_logged_in.html.erb within layouts/application (Duration: 0.1ms | Allocations: 42)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 152)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 763)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 1915)
+
+
+Started DELETE "/logout" for ::1 at 2024-05-26 16:00:00 +0900
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 1211)
+
+
+Started GET "/" for ::1 at 2024-05-26 16:00:00 +0900
+Processing by StaticpagesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top_logged_out.html.erb within layouts/application
+  Rendered staticpages/top_logged_out.html.erb within layouts/application (Duration: 0.3ms | Allocations: 222)
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 64)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 865)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 1627)
+
+
+Started GET "/users/new" for ::1 at 2024-05-26 16:00:01 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1544)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 2178)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 2720)
+
+
+Started GET "/users/new" for ::1 at 2024-05-26 16:00:04 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 912)
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 62)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 1542)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 1803)
+
+
+Started GET "/login" for ::1 at 2024-05-26 16:00:05 +0900
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 2853)
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 62)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 3501)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 3950)
+
+
+Started POST "/login" for ::1 at 2024-05-26 16:00:10 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"qwe@qwe", "password"=>"[FILTERED]", "commit"=>"ログイン"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'qwe@qwe' ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Login successful for user: qwe@qwe
+Redirected to http://localhost:3000/
+Completed 302 Found in 124ms (ActiveRecord: 0.4ms | Allocations: 1674)
+
+
+Started GET "/" for ::1 at 2024-05-26 16:00:10 +0900
+Processing by StaticpagesController#top as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top_logged_in.html.erb within layouts/application
+  Rendered staticpages/top_logged_in.html.erb within layouts/application (Duration: 0.1ms | Allocations: 42)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 152)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | Allocations: 763)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.1ms | Allocations: 1874)
+
+
+Started GET "/practices/new" for ::1 at 2024-05-26 16:01:16 +0900
+Processing by PracticesController#new as HTML
+  [1m[36mArticle Pluck (0.4ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/practices_controller.rb:4:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering practices/new.html.erb within layouts/application
+  Rendered practices/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1679)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 2825)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.5ms | Allocations: 3451)
+
+
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for ::1 at 2024-05-26 16:08:48 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticpagesController#top as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top_logged_in.html.erb within layouts/application
+  Rendered staticpages/top_logged_in.html.erb within layouts/application (Duration: 0.4ms | Allocations: 407)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 456)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 3749)
+Completed 200 OK in 46ms (Views: 6.7ms | ActiveRecord: 14.6ms | Allocations: 32700)
+
+
+Started GET "/practices/new" for ::1 at 2024-05-26 16:08:50 +0900
+Processing by PracticesController#new as HTML
+  [1m[36mArticle Pluck (0.5ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/practices_controller.rb:4:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering practices/new.html.erb within layouts/application
+  Rendered practices/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 2406)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.8ms | Allocations: 583)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 3561)
+Completed 200 OK in 17ms (Views: 2.9ms | ActiveRecord: 5.7ms | Allocations: 16350)
+
+
+Started POST "/practices" for ::1 at 2024-05-26 16:08:53 +0900
+Processing by PracticesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "difficulty_level"=>"medium", "commit"=>"Start"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.4ms | Allocations: 1539)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: practice):
+  
+app/controllers/practices_controller.rb:30:in `practice_params'
+app/controllers/practices_controller.rb:8:in `create'
+Started POST "/practices" for ::1 at 2024-05-26 16:11:01 +0900
+Processing by PracticesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "difficulty_level"=>"medium", "commit"=>"Start"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 2538)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: practice):
+  
+app/controllers/practices_controller.rb:30:in `practice_params'
+app/controllers/practices_controller.rb:8:in `create'
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/practices/new" for ::1 at 2024-05-26 16:11:23 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PracticesController#new as HTML
+  [1m[36mArticle Pluck (0.7ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/practices_controller.rb:4:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering practices/new.html.erb within layouts/application
+  Rendered practices/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2961)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 10.1ms | Allocations: 11078)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 16866)
+Completed 200 OK in 61ms (Views: 13.1ms | ActiveRecord: 20.9ms | Allocations: 46419)
+
+
+Started POST "/practices" for ::1 at 2024-05-26 16:11:26 +0900
+Processing by PracticesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "practice"=>{"difficulty_level"=>"medium"}, "commit"=>"Start"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/practices_controller.rb:9:in `create'
+  [1m[36mPractice Create (1.2ms)[0m  [1m[32mINSERT INTO "practices" ("user_id", "start_time", "end_time", "score", "difficulty_level", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 3], ["start_time", "2024-05-26 07:11:26.172987"], ["end_time", nil], ["score", nil], ["difficulty_level", "medium"], ["created_at", "2024-05-26 07:11:26.174874"], ["updated_at", "2024-05-26 07:11:26.174874"]]
+  ↳ app/controllers/practices_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/practices_controller.rb:9:in `create'
+Redirected to http://localhost:3000/practices/59
+Completed 302 Found in 11ms (ActiveRecord: 2.6ms | Allocations: 5834)
+
+
+Started GET "/practices/59" for ::1 at 2024-05-26 16:11:26 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"59"}
+  [1m[36mPractice Load (0.6ms)[0m  [1m[34mSELECT "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:18:in `show'
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."difficulty_level" = $1 ORDER BY RANDOM() LIMIT $2[0m  [["difficulty_level", "medium"], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 421)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 2026)
+Completed 200 OK in 11ms (Views: 1.3ms | ActiveRecord: 4.5ms | Allocations: 9403)
+
+
+Started GET "/correct.mp3" for ::1 at 2024-05-26 16:11:26 +0900
+Started GET "/practices/new_word?difficulty_level=medium" for ::1 at 2024-05-26 16:11:26 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/correct.mp3"):
+  
+Processing by PracticesController#new_word as */*
+  Parameters: {"difficulty_level"=>"medium"}
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."difficulty_level" = $1 ORDER BY RANDOM() LIMIT $2[0m  [["difficulty_level", "medium"], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:23:in `new_word'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 32033)
+
+
+Started GET "/" for ::1 at 2024-05-26 16:11:28 +0900
+Processing by StaticpagesController#top as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top_logged_in.html.erb within layouts/application
+  Rendered staticpages/top_logged_in.html.erb within layouts/application (Duration: 0.3ms | Allocations: 182)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 154)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 918)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 2248)
+
+
+Started GET "/practices/new" for ::1 at 2024-05-26 16:11:30 +0900
+Processing by PracticesController#new as HTML
+  [1m[36mArticle Pluck (0.4ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/practices_controller.rb:4:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering practices/new.html.erb within layouts/application
+  Rendered practices/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 766)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 580)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1914)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.6ms | Allocations: 2571)
+
+
+Started POST "/practices" for ::1 at 2024-05-26 16:11:32 +0900
+Processing by PracticesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "practice"=>{"difficulty_level"=>"easy"}, "commit"=>"Start"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/practices_controller.rb:9:in `create'
+  [1m[36mPractice Create (1.0ms)[0m  [1m[32mINSERT INTO "practices" ("user_id", "start_time", "end_time", "score", "difficulty_level", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 3], ["start_time", "2024-05-26 07:11:32.507776"], ["end_time", nil], ["score", nil], ["difficulty_level", "easy"], ["created_at", "2024-05-26 07:11:32.508038"], ["updated_at", "2024-05-26 07:11:32.508038"]]
+  ↳ app/controllers/practices_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/practices_controller.rb:9:in `create'
+Redirected to http://localhost:3000/practices/60
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms | Allocations: 2822)
+
+
+Started GET "/practices/60" for ::1 at 2024-05-26 16:11:32 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mPractice Load (0.1ms)[0m  [1m[34mSELECT "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:18:in `show'
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."difficulty_level" = $1 ORDER BY RANDOM() LIMIT $2[0m  [["difficulty_level", "easy"], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:19:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 46)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 1651)
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.6ms | Allocations: 2868)
+
+
+Started GET "/correct.mp3" for ::1 at 2024-05-26 16:11:32 +0900
+Started GET "/practices/new_word?difficulty_level=easy" for ::1 at 2024-05-26 16:11:32 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/correct.mp3"):
+  
+Processing by PracticesController#new_word as */*
+  Parameters: {"difficulty_level"=>"easy"}
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."difficulty_level" = $1 ORDER BY RANDOM() LIMIT $2[0m  [["difficulty_level", "easy"], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:23:in `new_word'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 4266)
+
+
+Started GET "/" for ::1 at 2024-05-26 16:11:34 +0900
+Processing by StaticpagesController#top as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top_logged_in.html.erb within layouts/application
+  Rendered staticpages/top_logged_in.html.erb within layouts/application (Duration: 0.1ms | Allocations: 42)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 152)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 763)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 1899)
+
+
