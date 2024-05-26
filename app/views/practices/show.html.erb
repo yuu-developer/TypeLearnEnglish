@@ -1,0 +1,108 @@
+<!-- app/views/practices/show.html.erb -->
+<h1>Type the Sentence:</h1>
+<div id="sentence" style="font-size: 24px; margin-bottom: 20px;"><%= @article.content %></div>
+<textarea id="inputField" autofocus style="font-size: 24px; width: 100%; height: 50px;" disabled></textarea>
+<div>Time left: <span id="timer">300</span> seconds</div>
+<div>Correct Answers: <span id="correctCount">0</span></div>
+<button id="startButton">Start</button>
+<button id="resetButton" disabled>Reset</button>
+<audio id="correctSound" src="/correct.mp3" preload="auto"></audio>
+<div id="countdown">5</div>
+<%= link_to '戻る', new_practice_path, class: 'btn btn-secondary' %>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const timerElement = document.getElementById('timer');
+  const correctCountElement = document.getElementById('correctCount');
+  const inputField = document.getElementById('inputField');
+  const sentenceElement = document.getElementById('sentence');
+  const startButton = document.getElementById('startButton');
+  const resetButton = document.getElementById('resetButton');
+  const countdownElement = document.getElementById('countdown');
+  let intervalId = null;
+  let timeLeft = 300; // seconds
+  let correctCount = 0; // Count of correct answers
+  const difficultyLevel = '<%= @practice.difficulty_level %>'; // Get the selected difficulty level
+
+  function initializeGame() {
+    clearInterval(intervalId);
+    intervalId = null;
+    timeLeft = 300;
+    correctCount = 0;
+    timerElement.textContent = timeLeft;
+    correctCountElement.textContent = correctCount;
+    inputField.value = '';
+    inputField.disabled = true;
+    resetButton.disabled = true;
+    startButton.disabled = false;
+    countdownElement.style.display = 'none'; // カウントダウンもリセット
+    fetch(`/practices/new_word?difficulty_level=${difficultyLevel}`)
+      .then(response => response.json())
+      .then(data => {
+        sentenceElement.textContent = data.content;
+      })
+      .catch(error => console.error('Error fetching new word:', error));
+  }
+
+  startButton.addEventListener('click', function() {
+    let countdownNumber = 5; // カウントダウン開始の数値
+    countdownElement.style.display = 'block'; // カウントダウンを表示
+    countdownElement.textContent = countdownNumber;
+
+    const countdownInterval = setInterval(() => {
+      countdownNumber -= 1;
+      countdownElement.textContent = countdownNumber;
+      if (countdownNumber <= 0) {
+        clearInterval(countdownInterval);
+        countdownElement.style.display = 'none'; // カウントダウンを非表示に
+        if (!intervalId) { // タイマーが未設定の場合のみ設定
+          intervalId = setInterval(updateTimer, 1000);
+          inputField.disabled = false;
+          resetButton.disabled = false;
+          startButton.disabled = true;
+          inputField.focus(); // フォーカスを入力フィールドに自動的に移動
+        }
+      }
+    }, 1000);
+  });
+
+  resetButton.addEventListener('click', function() {
+    initializeGame();
+  });
+
+  function updateTimer() {
+    if (timeLeft <= 0) {
+      clearInterval(intervalId);
+      alert('Time is up! You scored ' + correctCount + ' correct answers.');
+      inputField.disabled = true;
+      resetButton.disabled = true;
+      startButton.disabled = false;
+      initializeGame();
+      return;
+    }
+    timeLeft -= 1;
+    timerElement.textContent = timeLeft;
+  }
+
+  inputField.addEventListener('input', function(e) {
+    var userInput = e.target.value.trim().toLowerCase();
+    var displayedSentence = sentenceElement.textContent.trim().toLowerCase();
+
+    if (userInput === displayedSentence) {
+      correctCount += 1;
+      correctCountElement.textContent = correctCount;
+      document.getElementById('correctSound').play();
+
+      fetch(`/practices/new_word?difficulty_level=${difficultyLevel}`)
+        .then(response => response.json())
+        .then(data => {
+          sentenceElement.textContent = data.content;
+          inputField.value = '';
+        })
+        .catch(error => console.error('Error fetching new word:', error));
+    }
+  });
+
+  initializeGame();
+});
+</script>

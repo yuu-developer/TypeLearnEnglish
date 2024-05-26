@@ -1,0 +1,128 @@
+/* line 1, app/assets/stylesheets/practices.scss */
+body {
+  background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+  font-family: 'Arial', sans-serif;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* line 14, app/assets/stylesheets/practices.scss */
+h1 {
+  font-size: 2.5rem;
+  color: #ffdd40;
+  text-shadow: 2px 2px 4px #000;
+  margin-bottom: 20px;
+}
+
+/* line 21, app/assets/stylesheets/practices.scss */
+#sentence {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px dashed #fff;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+/* line 30, app/assets/stylesheets/practices.scss */
+textarea {
+  width: 80%;
+  height: 100px;
+  margin: auto;
+  padding: 10px;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+/* line 39, app/assets/stylesheets/practices.scss */
+#timer, #correctCount {
+  font-size: 1.75rem;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* line 45, app/assets/stylesheets/practices.scss */
+button {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px #000;
+}
+
+/* line 57, app/assets/stylesheets/practices.scss */
+button:hover {
+  background-color: #ff4500;
+}
+
+/* line 61, app/assets/stylesheets/practices.scss */
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* line 66, app/assets/stylesheets/practices.scss */
+#countdown {
+  font-size: 8rem;
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: #ffdd40;
+  text-shadow: 2px 2px 4px #000;
+}
+
+/* line 77, app/assets/stylesheets/practices.scss */
+.form-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 8px;
+  border: 2px dashed #fff;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: auto;
+}
+
+/* line 88, app/assets/stylesheets/practices.scss */
+.form-group label {
+  font-size: 1.5rem;
+}
+
+/* line 92, app/assets/stylesheets/practices.scss */
+.form-group select {
+  font-size: 1.25rem;
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* line 100, app/assets/stylesheets/practices.scss */
+.btn-primary {
+  background-color: #ff6347;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px #000;
+}
+
+/* line 112, app/assets/stylesheets/practices.scss */
+.btn-primary:hover {
+  background-color: #ff4500;
+}
