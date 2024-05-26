@@ -13,9 +13,10 @@
 
 @import "bootstrap";
 @import "top";
+@import "practices";
 
 header {
-  background-color: #f8f9fa;
+  background-color: #0e0d0d; /* 背景色を薄い赤色に */
   padding: 10px 20px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -31,7 +32,6 @@ header nav ul li {
 }
 
 footer {
-  background-color: #f8f9fa;
   text-align: center;
   padding: 10px 0;
   position: fixed;
@@ -44,19 +44,20 @@ footer p {
 }
 
 .logout-button {
-  display: inline; /* ボタンをインライン表示にする */
-  margin: 0; /* 余白をなくす */
-  padding: 0; /* 余白をなくす */
-  background: none; /* 背景をなくす */
-  border: none; /* 枠線をなくす */
-  color: #007bff; /* リンクの色に合わせる */
-  cursor: pointer; /* ポインターに変更 */
-  text-decoration: underline; /* リンクのように下線を追加 */
-  font: inherit; /* フォントを継承 */
+  display: inline !important; /* ボタンをインライン表示にする */
+  margin: 0 !important; /* 余白をなくす */
+  padding: 0 !important; /* 余白をなくす */
+  background: none !important; /* 背景をなくす */
+  border: none !important; /* 枠線をなくす */
+  outline: none !important; /* フォーカス時のアウトラインをなくす */
+  color: #007bff !important; /* リンクの色に合わせる */
+  cursor: pointer !important; /* ポインターに変更 */
+  text-decoration: underline !important; /* リンクのように下線を追加 */
+  font: inherit !important; /* フォントを継承 */
 }
 
 .logout-button:hover {
-  text-decoration: none; /* ホバー時の装飾を削除 */
+  text-decoration: none !important; /* ホバー時の装飾を削除 */
 }
 
 /* エラーメッセージのスタイル */

@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :practices, dependent: :destroy
   authenticates_with_sorcery!
 
   attr_accessor :password_confirmation
