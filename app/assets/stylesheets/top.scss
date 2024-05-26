@@ -1,28 +1,21 @@
-body {
-  background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
-  font-family: 'Arial', sans-serif;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-h1 {
-  font-size: 2.5rem;
-  color: #ffdd40;
-  text-shadow: 2px 2px 4px #000;
-}
-
 .top-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+  background-image: url("main.jpg");
+  height: calc(100vh - 134px);
+  position: relative;
+  background-position: center;
 
-.top-inner-text {
-  text-align: center;
-}
+  .top-inner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(172, 31, 31);
 
-.btn {
-  margin-top: 20px;
+    @media screen and (max-width: 767px) {
+      font-size: 2rem;
+    }
+  }
 }
