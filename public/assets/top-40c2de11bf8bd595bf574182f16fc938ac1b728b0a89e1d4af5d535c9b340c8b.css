@@ -1,0 +1,33 @@
+/* line 1, app/assets/stylesheets/top.scss */
+body {
+  background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+  font-family: 'Arial', sans-serif;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* line 9, app/assets/stylesheets/top.scss */
+h1 {
+  font-size: 2.5rem;
+  color: #ffdd40;
+  text-shadow: 2px 2px 4px #000;
+}
+
+/* line 15, app/assets/stylesheets/top.scss */
+.top-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* line 22, app/assets/stylesheets/top.scss */
+.top-inner-text {
+  text-align: center;
+}
+
+/* line 26, app/assets/stylesheets/top.scss */
+.btn {
+  margin-top: 20px;
+}

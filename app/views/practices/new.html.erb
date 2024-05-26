@@ -1,12 +1,24 @@
 <h1>タイピング練習</h1>
 
-<div class="form-container">
-  <%= form_with url: practices_path, method: :post, local: true do |form| %>
-    <div class="form-group">
-      <%= form.label :difficulty_level, "難易度を選択してください" %>
-      <%= form.select :difficulty_level, @difficulty_levels, { class: "form-control" } %>
-    </div>
+<%= form_with url: practices_path, method: :post, local: true, id: 'practice_form' do |form| %>
+  <div class="form-group">
+    <%= form.label :difficulty_level, "難易度を選択してください" %>
+    <%= form.select :difficulty_level, @difficulty_levels, { prompt: "難易度を選択してください" }, { class: "form-control", id: 'difficulty_level' } %>
+  </div>
 
-    <%= form.submit "Start", class: "btn btn-primary" %>
-  <% end %>
-</div>
+  <%= form.submit "Start", class: "btn btn-primary" %>
+<% end %>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('practice_form');
+    const difficultySelect = document.getElementById('difficulty_level');
+
+    form.addEventListener('submit', function(event) {
+      if (difficultySelect.value === "") {
+        event.preventDefault();
+        alert("難易度を選択してください。");
+      }
+    });
+  });
+</script>
