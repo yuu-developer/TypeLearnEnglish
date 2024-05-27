@@ -19,9 +19,12 @@ Rails.application.routes.draw do
   
   get "up" => "rails/health#show", as: :rails_health_check
 
-  resources :practices, only: [:new, :create, :show] do
+  resources :practices, only: [:new, :create, :show, :update] do
     collection do
       get 'new_word'
+    end
+    member do
+      get 'result'
     end
   end
 end
