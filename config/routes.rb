@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   
   get "up" => "rails/health#show", as: :rails_health_check
 
-  resources :practices, only: [:new, :create, :show, :update] do
+  resources :practices, only: [:new, :create, :show] do
     collection do
       get 'new_word'
     end
@@ -27,4 +27,6 @@ Rails.application.routes.draw do
       get 'result'
     end
   end
+
+  get 'articles', to: 'articles#index', as: 'articles'
 end
