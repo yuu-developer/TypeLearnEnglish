@@ -1,7 +1,7 @@
-<!-- app/views/articles/index.html.erb -->
-<h1>英文一覧</h1>
+<h1>掲載している英文一覧</h1>
 
 <div>
+  <h2>難易度を選択してください</h2>
   <% @difficulty_levels.each do |level| %>
     <%= link_to level.capitalize, "##{level}", class: 'btn btn-primary' %>
   <% end %>
@@ -13,7 +13,7 @@
     <div class="article">
       <h3><%= article.content %></h3>
       <p><%= article.translation %></p>
-      <p><strong>文法説明:</strong> <%= article.grammar_explanation %></p>
+      <%= link_to '解説を見る', explanation_article_path(article), class: 'btn btn-info' %>
     </div>
   <% end %>
 <% end %>
@@ -27,8 +27,8 @@
   .article {
     margin-bottom: 20px;
     padding: 10px;
-    border: 1px solid #261d1d;
+    border: 1px solid #231919;
     border-radius: 5px;
-    background-color: #1f1414;
+    background-color: #1c1717;
   }
 </style>

@@ -28,5 +28,9 @@ Rails.application.routes.draw do
     end
   end
 
-  get 'articles', to: 'articles#index', as: 'articles'
+  resources :articles, only: [:index, :show] do
+    member do
+      get 'explanation'
+    end
+  end
 end

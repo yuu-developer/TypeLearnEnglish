@@ -1,0 +1,23 @@
+<h1>英文解説</h1>
+<div class="article-content">
+  <h3><%= @article.content %></h3>
+  <p><%= @article.translation %></p>
+  <p><strong>文法説明:</strong> <%= @article.grammar_explanation %></p>
+  
+  <h3>単語の意味</h3>
+  <ul>
+    <% @article.word_explanations.each do |explanation| %>
+      <li><strong><%= explanation['word'] %></strong>: <%= explanation['meaning'] %></li>
+    <% end %>
+  </ul>
+</div>
+<%= link_to '戻る', articles_path, class: 'btn btn-secondary' %>
+
+<style>
+  .article-content {
+    background: #111214;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #201a1a;
+  }
+</style>
