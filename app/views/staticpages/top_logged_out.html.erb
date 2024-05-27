@@ -2,9 +2,53 @@
   <div class='top-inner-text'>
     <h1>英語タイピングアプリ</h1>
     <h1>Welcome to TypeLearnEnglish</h1>
+    <p>このアプリは、タイピングを使い効果的に英語力を向上させます！</p>
+    <p>英語スキルの実践の場としてご活用いただけます！</p>
+    <p>さあ、今日から英語タイピングを始めてみませんか？</p>
     <p>
-      <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-primary' %>
-      <%= link_to 'Log in', new_session_path, class: 'btn btn-secondary' %>
+      <%= link_to '新規登録', new_user_registration_path, class: 'btn btn-primary' %>
+      <%= link_to 'ログイン', new_session_path, class: 'btn btn-secondary' %>
     </p>
   </div>
 </div>
+
+<style>
+  h1 {
+    font-size: 2.5rem;
+    color: #ffdd40;
+    text-shadow: 2px 2px 4px #000;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1.25rem;
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+
+  .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
+
+  .btn-secondary:hover {
+    background-color: #565e64;
+    border-color: #565e64;
+  }
+</style>

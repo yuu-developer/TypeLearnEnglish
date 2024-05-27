@@ -4,7 +4,7 @@
   <%= form_with model: Practice.new, url: practices_path, local: true, id: 'practice_form' do |form| %>
     <div class="form-group">
       <%= form.label :difficulty_level, "難易度を選択してください", class: "form-label" %>
-      <%= form.select :difficulty_level, @difficulty_levels, { prompt: "難易度を選択してください" }, { class: "form-control", id: 'difficulty_level' } %>
+      <%= form.select :difficulty_level, @difficulty_levels, { prompt: "クリックで難易度選択" }, { class: "form-control", id: 'difficulty_level' } %>
     </div>
     <div style="margin-top: 20px;">
       <%= form.submit "Start", class: "btn btn-primary" %>
