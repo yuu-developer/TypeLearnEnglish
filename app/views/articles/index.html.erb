@@ -1,16 +1,15 @@
-<h1>掲載している英文一覧</h1>
+<h1>英文一覧</h1>
 
 <div>
-  <h2>難易度を選択してください</h2>
   <% @difficulty_levels.each do |level| %>
     <%= link_to level.capitalize, "##{level}", class: 'btn btn-primary' %>
   <% end %>
 </div>
 
 <div>
-  <h2>検索</h2>
+  <h1>英文検索</h1>
   <%= form_with url: articles_path, method: :get, local: true do %>
-    <input type="text" name="search" id="search-input" placeholder="検索する英文を入力">
+    <input type="text" name="search" id="search-input" placeholder="英文字を入力">
     <button type="submit" class="btn btn-primary">検索</button>
     <%= link_to 'リセット', articles_path, class: 'btn btn-secondary' %>
   <% end %>
@@ -34,6 +33,11 @@
 <style>
   .btn-primary {
     margin-right: 5px;
+    background-color: #1c1717;
+  }
+  .btn-secondary{
+    margin-right: 5px;
+    background-color: #1c1717;
   }
   .article {
     margin-bottom: 20px;
