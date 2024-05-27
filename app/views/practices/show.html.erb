@@ -1,4 +1,3 @@
-<!-- app/views/practices/show.html.erb -->
 <h1>Type the Sentence:</h1>
 <div id="sentence" style="font-size: 24px; margin-bottom: 20px;"><%= @article.content %></div>
 <textarea id="inputField" autofocus style="font-size: 24px; width: 100%; height: 50px;" disabled></textarea>
@@ -7,7 +6,7 @@
 <button id="startButton">Start</button>
 <button id="resetButton" disabled>Reset</button>
 <audio id="correctSound" src="/correct.mp3" preload="auto"></audio>
-<div id="countdown">5</div>
+<div id="countdown" style="position: fixed; bottom: 20px; width: 100%; text-align: center; font-size: 3rem; display: none;">5</div>
 <%= link_to '戻る', new_practice_path, class: 'btn btn-secondary' %>
 
 <script>
@@ -23,11 +22,12 @@ document.addEventListener('DOMContentLoaded', function() {
   let timeLeft = 300; // seconds
   let correctCount = 0; // Count of correct answers
   const difficultyLevel = '<%= @practice.difficulty_level %>'; // Get the selected difficulty level
+  const practiceId = '<%= @practice.id %>'; // Get the practice ID
 
   function initializeGame() {
     clearInterval(intervalId);
     intervalId = null;
-    timeLeft = 300;
+    timeLeft = 10;
     correctCount = 0;
     timerElement.textContent = timeLeft;
     correctCountElement.textContent = correctCount;
@@ -73,11 +73,27 @@ document.addEventListener('DOMContentLoaded', function() {
   function updateTimer() {
     if (timeLeft <= 0) {
       clearInterval(intervalId);
-      alert('Time is up! You scored ' + correctCount + ' correct answers.');
-      inputField.disabled = true;
-      resetButton.disabled = true;
-      startButton.disabled = false;
-      initializeGame();
+      fetch(`/practices/${practiceId}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]').content
+        },
+        body: JSON.stringify({
+          practice: {
+            end_time: new Date().toISOString(),
+            score: correctCount
+          }
+        })
+      })
+      .then(response => {
+        if (response.ok) {
+          window.location.href = `/practices/${practiceId}/result`;
+        } else {
+          alert('Failed to save the result.');
+        }
+      })
+      .catch(error => console.error('Error:', error));
       return;
     }
     timeLeft -= 1;

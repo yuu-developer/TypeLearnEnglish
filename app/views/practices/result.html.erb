@@ -1,0 +1,9 @@
+<h1>Practice Result</h1>
+
+<p>Score: <%= @practice.score %></p>
+<p>Difficulty Level: <%= @practice.difficulty_level %></p>
+<p>Start Time: <%= @practice.start_time %></p>
+<p>End Time: <%= @practice.end_time %></p>
+
+<%= link_to 'New Practice', new_practice_path, class: 'btn btn-primary' %>
+<%= link_to 'Back to Home', root_path, class: 'btn btn-secondary' %>
