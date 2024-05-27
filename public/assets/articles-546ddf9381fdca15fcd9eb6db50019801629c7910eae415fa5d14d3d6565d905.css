@@ -1,0 +1,69 @@
+/* app/assets/stylesheets/application.css */
+/* line 2, app/assets/stylesheets/articles.scss */
+body {
+  background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+  font-family: 'Arial', sans-serif;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* line 10, app/assets/stylesheets/articles.scss */
+h1, h2 {
+  font-size: 2.5rem;
+  color: #ffdd40;
+  text-shadow: 2px 2px 4px #000;
+}
+
+/* line 16, app/assets/stylesheets/articles.scss */
+.table {
+  width: 100%;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-collapse: collapse;
+}
+
+/* line 23, app/assets/stylesheets/articles.scss */
+.table th, .table td {
+  padding: 10px;
+  border: 1px solid #fff;
+  text-align: left;
+}
+
+/* line 29, app/assets/stylesheets/articles.scss */
+.table th {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* line 33, app/assets/stylesheets/articles.scss */
+.table td {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* line 37, app/assets/stylesheets/articles.scss */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* line 49, app/assets/stylesheets/articles.scss */
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* line 53, app/assets/stylesheets/articles.scss */
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+/* line 57, app/assets/stylesheets/articles.scss */
+.btn-secondary:hover {
+  background-color: #5a6268;
+}

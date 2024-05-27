@@ -1,0 +1,34 @@
+<!-- app/views/articles/index.html.erb -->
+<h1>英文一覧</h1>
+
+<div>
+  <% @difficulty_levels.each do |level| %>
+    <%= link_to level.capitalize, "##{level}", class: 'btn btn-primary' %>
+  <% end %>
+</div>
+
+<% @articles_by_difficulty.each do |difficulty, articles| %>
+  <h2 id="<%= difficulty %>"><%= difficulty.capitalize %></h2>
+  <% articles.each do |article| %>
+    <div class="article">
+      <h3><%= article.content %></h3>
+      <p><%= article.translation %></p>
+      <p><strong>文法説明:</strong> <%= article.grammar_explanation %></p>
+    </div>
+  <% end %>
+<% end %>
+
+<%= link_to '戻る', root_path, class: 'btn btn-secondary' %>
+
+<style>
+  .btn-primary {
+    margin-right: 5px;
+  }
+  .article {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #261d1d;
+    border-radius: 5px;
+    background-color: #1f1414;
+  }
+</style>

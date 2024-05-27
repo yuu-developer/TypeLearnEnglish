@@ -13082,3 +13082,418 @@ Processing by PracticesController#new as HTML
 Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 1.0ms | Allocations: 2556)
 
 
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for ::1 at 2024-05-27 11:42:26 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticpagesController#top as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top_logged_in.html.erb within layouts/application
+  Rendered staticpages/top_logged_in.html.erb within layouts/application (Duration: 0.3ms | Allocations: 456)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 456)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 3798)
+Completed 200 OK in 47ms (Views: 6.9ms | ActiveRecord: 13.7ms | Allocations: 32804)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 11:42:28 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:13
+  Rendered articles/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 7543)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 585)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 9172)
+Completed 200 OK in 11ms (Views: 5.8ms | ActiveRecord: 3.0ms | Allocations: 11520)
+
+
+Started GET "/" for ::1 at 2024-05-27 11:43:26 +0900
+Processing by StaticpagesController#top as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top_logged_in.html.erb within layouts/application
+  Rendered staticpages/top_logged_in.html.erb within layouts/application (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 152)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | Allocations: 784)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 1930)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 11:43:27 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:13
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 584)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.8ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 2202)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.6ms | Allocations: 2458)
+
+
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for ::1 at 2024-05-27 11:49:10 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticpagesController#top as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top_logged_in.html.erb within layouts/application
+  Rendered staticpages/top_logged_in.html.erb within layouts/application (Duration: 0.4ms | Allocations: 456)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 456)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3798)
+Completed 200 OK in 47ms (Views: 8.8ms | ActiveRecord: 14.1ms | Allocations: 32776)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 11:49:11 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 369)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.8ms | Allocations: 585)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 2004)
+Completed 200 OK in 13ms (Views: 1.9ms | ActiveRecord: 4.9ms | Allocations: 11539)
+
+
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (2.2ms)[0m  [1m[32mINSERT INTO "articles" ("content", "translation", "grammar_explanation", "difficulty_level", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "The quick brown fox jumps over the lazy dog."], ["translation", "素早い茶色のキツネが怠惰な犬を飛び越える。"], ["grammar_explanation", "この文は英語の全てのアルファベットを含んでいます。"], ["difficulty_level", "easy"], ["created_at", "2024-05-27 02:49:31.064706"], ["updated_at", "2024-05-27 02:49:31.064706"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("content", "translation", "grammar_explanation", "difficulty_level", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "To be, or not to be, that is the question."], ["translation", "生きるべきか死ぬべきか、それが問題だ。"], ["grammar_explanation", "シェイクスピアのハムレットの有名な引用です。"], ["difficulty_level", "medium"], ["created_at", "2024-05-27 02:49:31.070312"], ["updated_at", "2024-05-27 02:49:31.070312"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.8ms)[0m  [1m[32mINSERT INTO "articles" ("content", "translation", "grammar_explanation", "difficulty_level", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "All that glitters is not gold."], ["translation", "輝くもの全てが金とは限らない。"], ["grammar_explanation", "これは、見た目が価値があるように見えるものが必ずしもそうではないことを意味します。"], ["difficulty_level", "easy"], ["created_at", "2024-05-27 02:49:31.072176"], ["updated_at", "2024-05-27 02:49:31.072176"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("content", "translation", "grammar_explanation", "difficulty_level", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "A journey of a thousand miles begins with a single step."], ["translation", "千里の道も一歩から。"], ["grammar_explanation", "これは、大きなことは小さな一歩から始まるという意味です。"], ["difficulty_level", "medium"], ["created_at", "2024-05-27 02:49:31.073870"], ["updated_at", "2024-05-27 02:49:31.073870"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("content", "translation", "grammar_explanation", "difficulty_level", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "The only thing we have to fear is fear itself."], ["translation", "我々が恐れるべき唯一のものは恐怖そのものだ。"], ["grammar_explanation", "フランクリン・D・ルーズベルトの就任演説からの引用です。"], ["difficulty_level", "hard"], ["created_at", "2024-05-27 02:49:31.075767"], ["updated_at", "2024-05-27 02:49:31.075767"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for ::1 at 2024-05-27 11:49:45 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticpagesController#top as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top_logged_in.html.erb within layouts/application
+  Rendered staticpages/top_logged_in.html.erb within layouts/application (Duration: 0.3ms | Allocations: 456)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 456)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 3798)
+Completed 200 OK in 46ms (Views: 6.9ms | ActiveRecord: 13.8ms | Allocations: 32882)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 11:49:46 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 414)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 585)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 2058)
+Completed 200 OK in 11ms (Views: 1.9ms | ActiveRecord: 3.8ms | Allocations: 11663)
+
+
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPracticeArticle Load (2.5ms)[0m  [1m[34mSELECT "practice_articles".* FROM "practice_articles" WHERE "practice_articles"."article_id" = $1[0m  [["article_id", 1]]
+  [1m[36mWordArticle Load (1.7ms)[0m  [1m[34mSELECT "word_articles".* FROM "word_articles" WHERE "word_articles"."article_id" = $1[0m  [["article_id", 1]]
+  [1m[36mArticle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPracticeArticle Load (0.1ms)[0m  [1m[34mSELECT "practice_articles".* FROM "practice_articles" WHERE "practice_articles"."article_id" = $1[0m  [["article_id", 2]]
+  [1m[36mWordArticle Load (0.1ms)[0m  [1m[34mSELECT "word_articles".* FROM "word_articles" WHERE "word_articles"."article_id" = $1[0m  [["article_id", 2]]
+  [1m[36mArticle Destroy (0.2ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPracticeArticle Load (0.1ms)[0m  [1m[34mSELECT "practice_articles".* FROM "practice_articles" WHERE "practice_articles"."article_id" = $1[0m  [["article_id", 3]]
+  [1m[36mWordArticle Load (0.1ms)[0m  [1m[34mSELECT "word_articles".* FROM "word_articles" WHERE "word_articles"."article_id" = $1[0m  [["article_id", 3]]
+  [1m[36mArticle Destroy (0.2ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPracticeArticle Load (0.1ms)[0m  [1m[34mSELECT "practice_articles".* FROM "practice_articles" WHERE "practice_articles"."article_id" = $1[0m  [["article_id", 4]]
+  [1m[36mWordArticle Load (0.1ms)[0m  [1m[34mSELECT "word_articles".* FROM "word_articles" WHERE "word_articles"."article_id" = $1[0m  [["article_id", 4]]
+  [1m[36mArticle Destroy (0.2ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPracticeArticle Load (0.1ms)[0m  [1m[34mSELECT "practice_articles".* FROM "practice_articles" WHERE "practice_articles"."article_id" = $1[0m  [["article_id", 5]]
+  [1m[36mWordArticle Load (0.1ms)[0m  [1m[34mSELECT "word_articles".* FROM "word_articles" WHERE "word_articles"."article_id" = $1[0m  [["article_id", 5]]
+  [1m[36mArticle Destroy (0.2ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPracticeArticle Load (0.1ms)[0m  [1m[34mSELECT "practice_articles".* FROM "practice_articles" WHERE "practice_articles"."article_id" = $1[0m  [["article_id", 6]]
+  [1m[36mWordArticle Load (0.1ms)[0m  [1m[34mSELECT "word_articles".* FROM "word_articles" WHERE "word_articles"."article_id" = $1[0m  [["article_id", 6]]
+  [1m[36mArticle Destroy (0.2ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPracticeArticle Load (0.1ms)[0m  [1m[34mSELECT "practice_articles".* FROM "practice_articles" WHERE "practice_articles"."article_id" = $1[0m  [["article_id", 7]]
+  [1m[36mWordArticle Load (0.1ms)[0m  [1m[34mSELECT "word_articles".* FROM "word_articles" WHERE "word_articles"."article_id" = $1[0m  [["article_id", 7]]
+  [1m[36mArticle Destroy (0.2ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPracticeArticle Load (0.1ms)[0m  [1m[34mSELECT "practice_articles".* FROM "practice_articles" WHERE "practice_articles"."article_id" = $1[0m  [["article_id", 8]]
+  [1m[36mWordArticle Load (0.2ms)[0m  [1m[34mSELECT "word_articles".* FROM "word_articles" WHERE "word_articles"."article_id" = $1[0m  [["article_id", 8]]
+  [1m[36mArticle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPracticeArticle Load (0.1ms)[0m  [1m[34mSELECT "practice_articles".* FROM "practice_articles" WHERE "practice_articles"."article_id" = $1[0m  [["article_id", 9]]
+  [1m[36mWordArticle Load (0.1ms)[0m  [1m[34mSELECT "word_articles".* FROM "word_articles" WHERE "word_articles"."article_id" = $1[0m  [["article_id", 9]]
+  [1m[36mArticle Destroy (0.3ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPracticeArticle Load (0.1ms)[0m  [1m[34mSELECT "practice_articles".* FROM "practice_articles" WHERE "practice_articles"."article_id" = $1[0m  [["article_id", 10]]
+  [1m[36mWordArticle Load (0.1ms)[0m  [1m[34mSELECT "word_articles".* FROM "word_articles" WHERE "word_articles"."article_id" = $1[0m  [["article_id", 10]]
+  [1m[36mArticle Destroy (0.3ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = $1[0m  [["id", 10]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.8ms)[0m  [1m[32mINSERT INTO "articles" ("content", "translation", "grammar_explanation", "difficulty_level", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "The quick brown fox jumps over the lazy dog."], ["translation", "素早い茶色のキツネが怠惰な犬を飛び越える。"], ["grammar_explanation", "この文は英語の全てのアルファベットを含んでいます。"], ["difficulty_level", "easy"], ["created_at", "2024-05-27 02:52:36.491503"], ["updated_at", "2024-05-27 02:52:36.491503"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("content", "translation", "grammar_explanation", "difficulty_level", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "To be, or not to be, that is the question."], ["translation", "生きるべきか死ぬべきか、それが問題だ。"], ["grammar_explanation", "シェイクスピアのハムレットの有名な引用です。"], ["difficulty_level", "medium"], ["created_at", "2024-05-27 02:52:36.495901"], ["updated_at", "2024-05-27 02:52:36.495901"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("content", "translation", "grammar_explanation", "difficulty_level", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "All that glitters is not gold."], ["translation", "輝くもの全てが金とは限らない。"], ["grammar_explanation", "これは、見た目が価値があるように見えるものが必ずしもそうではないことを意味します。"], ["difficulty_level", "easy"], ["created_at", "2024-05-27 02:52:36.497516"], ["updated_at", "2024-05-27 02:52:36.497516"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("content", "translation", "grammar_explanation", "difficulty_level", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "A journey of a thousand miles begins with a single step."], ["translation", "千里の道も一歩から。"], ["grammar_explanation", "これは、大きなことは小さな一歩から始まるという意味です。"], ["difficulty_level", "medium"], ["created_at", "2024-05-27 02:52:36.499468"], ["updated_at", "2024-05-27 02:52:36.499468"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("content", "translation", "grammar_explanation", "difficulty_level", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "The only thing we have to fear is fear itself."], ["translation", "我々が恐れるべき唯一のものは恐怖そのものだ。"], ["grammar_explanation", "フランクリン・D・ルーズベルトの就任演説からの引用です。"], ["difficulty_level", "hard"], ["created_at", "2024-05-27 02:52:36.501357"], ["updated_at", "2024-05-27 02:52:36.501357"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for ::1 at 2024-05-27 11:52:44 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticpagesController#top as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top_logged_in.html.erb within layouts/application
+  Rendered staticpages/top_logged_in.html.erb within layouts/application (Duration: 0.3ms | Allocations: 456)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 456)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 3798)
+Completed 200 OK in 46ms (Views: 6.8ms | ActiveRecord: 14.8ms | Allocations: 32776)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 11:52:46 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 369)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.8ms | Allocations: 585)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1992)
+Completed 200 OK in 24ms (Views: 2.6ms | ActiveRecord: 14.8ms | Allocations: 11512)
+
+
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPracticeArticle Load (0.9ms)[0m  [1m[34mSELECT "practice_articles".* FROM "practice_articles" WHERE "practice_articles"."article_id" = $1[0m  [["article_id", 11]]
+  [1m[36mWordArticle Load (0.4ms)[0m  [1m[34mSELECT "word_articles".* FROM "word_articles" WHERE "word_articles"."article_id" = $1[0m  [["article_id", 11]]
+  [1m[36mArticle Destroy (0.8ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = $1[0m  [["id", 11]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPracticeArticle Load (0.2ms)[0m  [1m[34mSELECT "practice_articles".* FROM "practice_articles" WHERE "practice_articles"."article_id" = $1[0m  [["article_id", 12]]
+  [1m[36mWordArticle Load (0.2ms)[0m  [1m[34mSELECT "word_articles".* FROM "word_articles" WHERE "word_articles"."article_id" = $1[0m  [["article_id", 12]]
+  [1m[36mArticle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = $1[0m  [["id", 12]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPracticeArticle Load (0.2ms)[0m  [1m[34mSELECT "practice_articles".* FROM "practice_articles" WHERE "practice_articles"."article_id" = $1[0m  [["article_id", 13]]
+  [1m[36mWordArticle Load (0.2ms)[0m  [1m[34mSELECT "word_articles".* FROM "word_articles" WHERE "word_articles"."article_id" = $1[0m  [["article_id", 13]]
+  [1m[36mArticle Destroy (0.2ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = $1[0m  [["id", 13]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPracticeArticle Load (0.2ms)[0m  [1m[34mSELECT "practice_articles".* FROM "practice_articles" WHERE "practice_articles"."article_id" = $1[0m  [["article_id", 14]]
+  [1m[36mWordArticle Load (0.2ms)[0m  [1m[34mSELECT "word_articles".* FROM "word_articles" WHERE "word_articles"."article_id" = $1[0m  [["article_id", 14]]
+  [1m[36mArticle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = $1[0m  [["id", 14]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPracticeArticle Load (0.2ms)[0m  [1m[34mSELECT "practice_articles".* FROM "practice_articles" WHERE "practice_articles"."article_id" = $1[0m  [["article_id", 15]]
+  [1m[36mWordArticle Load (0.2ms)[0m  [1m[34mSELECT "word_articles".* FROM "word_articles" WHERE "word_articles"."article_id" = $1[0m  [["article_id", 15]]
+  [1m[36mArticle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = $1[0m  [["id", 15]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (1.0ms)[0m  [1m[32mINSERT INTO "articles" ("content", "translation", "grammar_explanation", "difficulty_level", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "The quick brown fox jumps over the lazy dog."], ["translation", "素早い茶色のキツネが怠惰な犬を飛び越える。"], ["grammar_explanation", "この文は英語の全てのアルファベットを含んでいます。"], ["difficulty_level", "easy"], ["created_at", "2024-05-27 02:58:24.525464"], ["updated_at", "2024-05-27 02:58:24.525464"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("content", "translation", "grammar_explanation", "difficulty_level", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "To be, or not to be, that is the question."], ["translation", "生きるべきか死ぬべきか、それが問題だ。"], ["grammar_explanation", "シェイクスピアのハムレットの有名な引用です。"], ["difficulty_level", "medium"], ["created_at", "2024-05-27 02:58:24.527796"], ["updated_at", "2024-05-27 02:58:24.527796"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("content", "translation", "grammar_explanation", "difficulty_level", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "All that glitters is not gold."], ["translation", "輝くもの全てが金とは限らない。"], ["grammar_explanation", "これは、見た目が価値があるように見えるものが必ずしもそうではないことを意味します。"], ["difficulty_level", "easy"], ["created_at", "2024-05-27 02:58:24.529302"], ["updated_at", "2024-05-27 02:58:24.529302"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("content", "translation", "grammar_explanation", "difficulty_level", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "A journey of a thousand miles begins with a single step."], ["translation", "千里の道も一歩から。"], ["grammar_explanation", "これは、大きなことは小さな一歩から始まるという意味です。"], ["difficulty_level", "medium"], ["created_at", "2024-05-27 02:58:24.530804"], ["updated_at", "2024-05-27 02:58:24.530804"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("content", "translation", "grammar_explanation", "difficulty_level", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "The only thing we have to fear is fear itself."], ["translation", "我々が恐れるべき唯一のものは恐怖そのものだ。"], ["grammar_explanation", "フランクリン・D・ルーズベルトの就任演説からの引用です。"], ["difficulty_level", "hard"], ["created_at", "2024-05-27 02:58:24.532324"], ["updated_at", "2024-05-27 02:58:24.532324"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for ::1 at 2024-05-27 11:58:32 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticpagesController#top as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top_logged_in.html.erb within layouts/application
+  Rendered staticpages/top_logged_in.html.erb within layouts/application (Duration: 0.3ms | Allocations: 456)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 456)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 3798)
+Completed 200 OK in 48ms (Views: 6.6ms | ActiveRecord: 16.8ms | Allocations: 32779)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 11:58:33 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (1.1ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `index'
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:5:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 502)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 1.0ms | Allocations: 585)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 2131)
+Completed 200 OK in 14ms (Views: 2.0ms | ActiveRecord: 5.3ms | Allocations: 12101)
+
+
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for ::1 at 2024-05-27 11:59:53 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticpagesController#top as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top_logged_in.html.erb within layouts/application
+  Rendered staticpages/top_logged_in.html.erb within layouts/application (Duration: 0.3ms | Allocations: 456)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 456)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 3798)
+Completed 200 OK in 43ms (Views: 6.8ms | ActiveRecord: 12.0ms | Allocations: 32764)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 11:59:55 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (1.1ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `index'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:5:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 502)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.8ms | Allocations: 585)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 2131)
+Completed 200 OK in 14ms (Views: 2.0ms | ActiveRecord: 5.3ms | Allocations: 12102)
+
+
+Started GET "/" for ::1 at 2024-05-27 12:01:08 +0900
+Processing by StaticpagesController#top as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top_logged_in.html.erb within layouts/application
+  Rendered staticpages/top_logged_in.html.erb within layouts/application (Duration: 0.2ms | Allocations: 253)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 410)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 3264)
+Completed 200 OK in 12ms (Views: 3.1ms | ActiveRecord: 5.9ms | Allocations: 10037)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 12:01:09 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (0.3ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `index'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:5:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 482)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 583)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 2095)
+Completed 200 OK in 11ms (Views: 1.9ms | ActiveRecord: 4.9ms | Allocations: 8296)
+
+
+Started GET "/" for ::1 at 2024-05-27 12:02:18 +0900
+Processing by StaticpagesController#top as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top_logged_in.html.erb within layouts/application
+  Rendered staticpages/top_logged_in.html.erb within layouts/application (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 152)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 784)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 1918)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 12:02:23 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (0.4ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `index'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:5:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 136)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1730)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.7ms | Allocations: 2859)
+
+
