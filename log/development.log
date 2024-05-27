@@ -13497,3 +13497,1002 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.7ms | Allocations: 2859)
 
 
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for ::1 at 2024-05-27 13:17:38 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticpagesController#top as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top_logged_in.html.erb within layouts/application
+  Rendered staticpages/top_logged_in.html.erb within layouts/application (Duration: 0.3ms | Allocations: 456)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 456)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 3798)
+Completed 200 OK in 49ms (Views: 6.9ms | ActiveRecord: 16.6ms | Allocations: 32773)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 13:17:40 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (0.6ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:3:in `index'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 646)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.8ms | Allocations: 585)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 2266)
+Completed 200 OK in 13ms (Views: 1.9ms | ActiveRecord: 4.8ms | Allocations: 12234)
+
+
+Started GET "/articles/16/explanation" for ::1 at 2024-05-27 13:17:41 +0900
+Processing by ArticlesController#explanation as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `explanation'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/explanation.html.erb within layouts/application
+  Rendered articles/explanation.html.erb within layouts/application (Duration: 0.3ms | Allocations: 224)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1847)
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.6ms | Allocations: 3195)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 13:17:43 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (0.5ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:3:in `index'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 251)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1848)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.8ms | Allocations: 2977)
+
+
+Started GET "/articles/18/explanation" for ::1 at 2024-05-27 13:17:45 +0900
+Processing by ArticlesController#explanation as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `explanation'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/explanation.html.erb within layouts/application
+  Rendered articles/explanation.html.erb within layouts/application (Duration: 0.1ms | Allocations: 51)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.9ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 1659)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.7ms | Allocations: 2336)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 13:17:46 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (0.4ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:3:in `index'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 251)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 1.0ms | Allocations: 588)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1901)
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.7ms | Allocations: 3046)
+
+
+Started GET "/" for ::1 at 2024-05-27 13:18:05 +0900
+Processing by StaticpagesController#top as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top_logged_in.html.erb within layouts/application
+  Rendered staticpages/top_logged_in.html.erb within layouts/application (Duration: 0.2ms | Allocations: 253)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 410)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 3262)
+Completed 200 OK in 12ms (Views: 3.1ms | ActiveRecord: 5.8ms | Allocations: 10060)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 13:18:06 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (0.3ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:3:in `index'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 609)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 583)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 2243)
+Completed 200 OK in 9ms (Views: 1.8ms | ActiveRecord: 3.4ms | Allocations: 8441)
+
+
+Started GET "/articles/16/explanation" for ::1 at 2024-05-27 13:18:09 +0900
+Processing by ArticlesController#explanation as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `explanation'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/explanation.html.erb within layouts/application
+  Rendered articles/explanation.html.erb within layouts/application (Duration: 0.3ms | Allocations: 219)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1818)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.5ms | Allocations: 3162)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 13:18:11 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (0.4ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:3:in `index'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 251)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 586)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1869)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.8ms | Allocations: 2998)
+
+
+Started GET "/articles/18/explanation" for ::1 at 2024-05-27 13:18:13 +0900
+Processing by ArticlesController#explanation as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `explanation'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/explanation.html.erb within layouts/application
+  Rendered articles/explanation.html.erb within layouts/application (Duration: 0.1ms | Allocations: 51)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1647)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 2323)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 13:18:16 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (0.6ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:3:in `index'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 251)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 593)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1881)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.9ms | Allocations: 3010)
+
+
+Started GET "/articles/17/explanation" for ::1 at 2024-05-27 13:18:25 +0900
+Processing by ArticlesController#explanation as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `explanation'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/explanation.html.erb within layouts/application
+  Rendered articles/explanation.html.erb within layouts/application (Duration: 0.1ms | Allocations: 51)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1644)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.4ms | Allocations: 2320)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 13:18:26 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (0.4ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:3:in `index'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 251)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1839)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.7ms | Allocations: 2968)
+
+
+Started GET "/articles/16/explanation" for ::1 at 2024-05-27 13:18:42 +0900
+Processing by ArticlesController#explanation as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `explanation'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/explanation.html.erb within layouts/application
+  Rendered articles/explanation.html.erb within layouts/application (Duration: 0.1ms | Allocations: 51)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1650)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 2326)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 13:18:43 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (0.4ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:3:in `index'
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 251)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1857)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.8ms | Allocations: 2986)
+
+
+Started GET "/articles/16/explanation" for ::1 at 2024-05-27 13:18:44 +0900
+Processing by ArticlesController#explanation as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `explanation'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/explanation.html.erb within layouts/application
+  Rendered articles/explanation.html.erb within layouts/application (Duration: 0.1ms | Allocations: 51)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1659)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 2335)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 13:18:45 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (0.4ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:3:in `index'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 251)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1836)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.7ms | Allocations: 2965)
+
+
+Started GET "/articles/16/explanation" for ::1 at 2024-05-27 13:18:51 +0900
+Processing by ArticlesController#explanation as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `explanation'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/explanation.html.erb within layouts/application
+  Rendered articles/explanation.html.erb within layouts/application (Duration: 0.1ms | Allocations: 51)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1671)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 2347)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 13:18:52 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (0.4ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:3:in `index'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 251)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1851)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.8ms | Allocations: 2980)
+
+
+Started GET "/" for ::1 at 2024-05-27 13:27:10 +0900
+Processing by StaticpagesController#top as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top_logged_in.html.erb within layouts/application
+  Rendered staticpages/top_logged_in.html.erb within layouts/application (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 152)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 784)
+Completed 200 OK in 38ms (Views: 1.7ms | ActiveRecord: 6.1ms | Allocations: 4869)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 13:27:12 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (0.9ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:3:in `index'
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 251)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1836)
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 1.3ms | Allocations: 2988)
+
+
+Started GET "/articles/16/explanation" for ::1 at 2024-05-27 13:27:13 +0900
+Processing by ArticlesController#explanation as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `explanation'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/explanation.html.erb within layouts/application
+  Rendered articles/explanation.html.erb within layouts/application (Duration: 0.1ms | Allocations: 51)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1668)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.4ms | Allocations: 2346)
+
+
+Started GET "/" for ::1 at 2024-05-27 13:27:14 +0900
+Processing by StaticpagesController#top as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top_logged_in.html.erb within layouts/application
+  Rendered staticpages/top_logged_in.html.erb within layouts/application (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 152)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 784)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 1899)
+
+
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3174175540968163830)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to AddWordExplanationsToArticles (20240527043200)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "articles" ADD "word_explanations" json[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240527043200') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(3174175540968163830)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for ::1 at 2024-05-27 13:33:54 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticpagesController#top as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top_logged_in.html.erb within layouts/application
+  Rendered staticpages/top_logged_in.html.erb within layouts/application (Duration: 0.3ms | Allocations: 456)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 456)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 3798)
+Completed 200 OK in 47ms (Views: 6.9ms | ActiveRecord: 14.9ms | Allocations: 32795)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 13:33:55 +0900
+Processing by ArticlesController#index as HTML
+DEPRECATION WARNING: Passing the coder as positional argument is deprecated and will be removed in Rails 7.2.
+
+Please pass the coder as a keyword argument:
+
+  serialize :word_explanations, coder: JSON
+ (called from <class:Article> at /Users/shimadzuyuuki/Projects/TypeLearnEnglish/app/models/article.rb:6)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 2.1ms | Allocations: 3378)
+
+
+  
+ActiveRecord::AttributeMethods::Serialization::ColumnNotSerializableError (Column `word_explanations` of type ActiveRecord::Type::Json does not support `serialize` feature.
+Usually it means that you are trying to use `serialize`
+on a column that already implements serialization natively.
+):
+  
+app/controllers/articles_controller.rb:3:in `index'
+Started GET "/articles" for ::1 at 2024-05-27 13:34:01 +0900
+Processing by ArticlesController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 720)
+
+
+  
+ActiveRecord::AttributeMethods::Serialization::ColumnNotSerializableError (Column `word_explanations` of type ActiveRecord::Type::Json does not support `serialize` feature.
+Usually it means that you are trying to use `serialize`
+on a column that already implements serialization natively.
+):
+  
+app/controllers/articles_controller.rb:3:in `index'
+Started GET "/articles" for ::1 at 2024-05-27 13:34:51 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (1.5ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:3:in `index'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 665)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 5.4ms | Allocations: 5659)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 9387)
+Completed 200 OK in 22ms (Views: 6.2ms | ActiveRecord: 9.0ms | Allocations: 21307)
+
+
+Started GET "/articles/16/explanation" for ::1 at 2024-05-27 13:34:53 +0900
+Processing by ArticlesController#explanation as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `explanation'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/explanation.html.erb within layouts/application
+  Rendered articles/explanation.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1186)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1277)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms | Allocations: 2625)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     6:   
+     7:   <h3>単語の意味</h3>
+     8:   <ul>
+     9:     <% @article.word_explanations.each do |explanation| %>
+    10:       <li><strong><%= explanation['word'] %></strong>: <%= explanation['meaning'] %></li>
+    11:     <% end %>
+    12:   </ul>
+  
+app/views/articles/explanation.html.erb:9
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPracticeArticle Load (0.9ms)[0m  [1m[34mSELECT "practice_articles".* FROM "practice_articles" WHERE "practice_articles"."article_id" = $1[0m  [["article_id", 16]]
+  [1m[36mWordArticle Load (2.4ms)[0m  [1m[34mSELECT "word_articles".* FROM "word_articles" WHERE "word_articles"."article_id" = $1[0m  [["article_id", 16]]
+  [1m[36mArticle Destroy (0.9ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = $1[0m  [["id", 16]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPracticeArticle Load (0.2ms)[0m  [1m[34mSELECT "practice_articles".* FROM "practice_articles" WHERE "practice_articles"."article_id" = $1[0m  [["article_id", 17]]
+  [1m[36mWordArticle Load (0.2ms)[0m  [1m[34mSELECT "word_articles".* FROM "word_articles" WHERE "word_articles"."article_id" = $1[0m  [["article_id", 17]]
+  [1m[36mArticle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = $1[0m  [["id", 17]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPracticeArticle Load (0.2ms)[0m  [1m[34mSELECT "practice_articles".* FROM "practice_articles" WHERE "practice_articles"."article_id" = $1[0m  [["article_id", 18]]
+  [1m[36mWordArticle Load (0.2ms)[0m  [1m[34mSELECT "word_articles".* FROM "word_articles" WHERE "word_articles"."article_id" = $1[0m  [["article_id", 18]]
+  [1m[36mArticle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = $1[0m  [["id", 18]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPracticeArticle Load (0.2ms)[0m  [1m[34mSELECT "practice_articles".* FROM "practice_articles" WHERE "practice_articles"."article_id" = $1[0m  [["article_id", 19]]
+  [1m[36mWordArticle Load (0.2ms)[0m  [1m[34mSELECT "word_articles".* FROM "word_articles" WHERE "word_articles"."article_id" = $1[0m  [["article_id", 19]]
+  [1m[36mArticle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = $1[0m  [["id", 19]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPracticeArticle Load (0.2ms)[0m  [1m[34mSELECT "practice_articles".* FROM "practice_articles" WHERE "practice_articles"."article_id" = $1[0m  [["article_id", 20]]
+  [1m[36mWordArticle Load (0.1ms)[0m  [1m[34mSELECT "word_articles".* FROM "word_articles" WHERE "word_articles"."article_id" = $1[0m  [["article_id", 20]]
+  [1m[36mArticle Destroy (0.2ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = $1[0m  [["id", 20]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (1.7ms)[0m  [1m[32mINSERT INTO "articles" ("content", "translation", "grammar_explanation", "difficulty_level", "created_at", "updated_at", "word_explanations") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["content", "The quick brown fox jumps over the lazy dog."], ["translation", "素早い茶色のキツネが怠惰な犬を飛び越える。"], ["grammar_explanation", "この文は英語の全てのアルファベットを含んでいます。"], ["difficulty_level", "easy"], ["created_at", "2024-05-27 04:35:59.690452"], ["updated_at", "2024-05-27 04:35:59.690452"], ["word_explanations", "[{\"word\":\"quick\",\"meaning\":\"速い\"},{\"word\":\"brown\",\"meaning\":\"茶色の\"},{\"word\":\"fox\",\"meaning\":\"キツネ\"},{\"word\":\"jumps\",\"meaning\":\"跳ぶ\"},{\"word\":\"lazy\",\"meaning\":\"怠惰な\"}]"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("content", "translation", "grammar_explanation", "difficulty_level", "created_at", "updated_at", "word_explanations") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["content", "To be, or not to be, that is the question."], ["translation", "生きるべきか死ぬべきか、それが問題だ。"], ["grammar_explanation", "シェイクスピアのハムレットの有名な引用です。"], ["difficulty_level", "medium"], ["created_at", "2024-05-27 04:35:59.693388"], ["updated_at", "2024-05-27 04:35:59.693388"], ["word_explanations", "[{\"word\":\"question\",\"meaning\":\"問題\"}]"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("content", "translation", "grammar_explanation", "difficulty_level", "created_at", "updated_at", "word_explanations") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["content", "All that glitters is not gold."], ["translation", "輝くもの全てが金とは限らない。"], ["grammar_explanation", "これは、見た目が価値があるように見えるものが必ずしもそうではないことを意味します。"], ["difficulty_level", "easy"], ["created_at", "2024-05-27 04:35:59.694948"], ["updated_at", "2024-05-27 04:35:59.694948"], ["word_explanations", "[{\"word\":\"glitters\",\"meaning\":\"輝く\"},{\"word\":\"gold\",\"meaning\":\"金\"}]"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("content", "translation", "grammar_explanation", "difficulty_level", "created_at", "updated_at", "word_explanations") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["content", "A journey of a thousand miles begins with a single step."], ["translation", "千里の道も一歩から。"], ["grammar_explanation", "これは、大きなことは小さな一歩から始まるという意味です。"], ["difficulty_level", "medium"], ["created_at", "2024-05-27 04:35:59.696475"], ["updated_at", "2024-05-27 04:35:59.696475"], ["word_explanations", "[{\"word\":\"journey\",\"meaning\":\"旅\"},{\"word\":\"thousand\",\"meaning\":\"千\"},{\"word\":\"miles\",\"meaning\":\"マイル\"},{\"word\":\"begins\",\"meaning\":\"始まる\"},{\"word\":\"single\",\"meaning\":\"一つの\"},{\"word\":\"step\",\"meaning\":\"一歩\"}]"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("content", "translation", "grammar_explanation", "difficulty_level", "created_at", "updated_at", "word_explanations") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["content", "The only thing we have to fear is fear itself."], ["translation", "我々が恐れるべき唯一のものは恐怖そのものだ。"], ["grammar_explanation", "フランクリン・D・ルーズベルトの就任演説からの引用です。"], ["difficulty_level", "hard"], ["created_at", "2024-05-27 04:35:59.697998"], ["updated_at", "2024-05-27 04:35:59.697998"], ["word_explanations", "[{\"word\":\"fear\",\"meaning\":\"恐怖\"},{\"word\":\"itself\",\"meaning\":\"それ自体\"}]"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, and [36mDATABASE_PORT[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/articles" for ::1 at 2024-05-27 13:36:16 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (0.9ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:3:in `index'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 880)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 9.6ms | Allocations: 11031)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 16420)
+Completed 200 OK in 59ms (Views: 14.1ms | ActiveRecord: 17.8ms | Allocations: 44488)
+
+
+Started GET "/articles/21/explanation" for ::1 at 2024-05-27 13:36:18 +0900
+Processing by ArticlesController#explanation as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `explanation'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/explanation.html.erb within layouts/application
+  Rendered articles/explanation.html.erb within layouts/application (Duration: 0.4ms | Allocations: 338)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 579)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1958)
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.4ms | Allocations: 3313)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 13:36:26 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (0.6ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:3:in `index'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 251)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 580)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1868)
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.9ms | Allocations: 3018)
+
+
+Started GET "/articles/23/explanation" for ::1 at 2024-05-27 13:36:27 +0900
+Processing by ArticlesController#explanation as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `explanation'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/explanation.html.erb within layouts/application
+  Rendered articles/explanation.html.erb within layouts/application (Duration: 0.1ms | Allocations: 66)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1665)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.4ms | Allocations: 2344)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 13:36:28 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (0.6ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:3:in `index'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 251)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1851)
+Completed 200 OK in 8ms (Views: 1.7ms | ActiveRecord: 1.1ms | Allocations: 2991)
+
+
+Started GET "/articles/22/explanation" for ::1 at 2024-05-27 13:36:30 +0900
+Processing by ArticlesController#explanation as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `explanation'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/explanation.html.erb within layouts/application
+  Rendered articles/explanation.html.erb within layouts/application (Duration: 0.1ms | Allocations: 61)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1669)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 2363)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 13:36:33 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (0.4ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:3:in `index'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 251)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1842)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.6ms | Allocations: 2980)
+
+
+Started GET "/articles/24/explanation" for ::1 at 2024-05-27 13:36:35 +0900
+Processing by ArticlesController#explanation as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `explanation'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/explanation.html.erb within layouts/application
+  Rendered articles/explanation.html.erb within layouts/application (Duration: 0.1ms | Allocations: 86)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.9ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1685)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.4ms | Allocations: 2378)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 13:36:39 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (0.4ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:3:in `index'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 251)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.9ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1848)
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.7ms | Allocations: 2984)
+
+
+Started GET "/" for ::1 at 2024-05-27 13:36:42 +0900
+Processing by StaticpagesController#top as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top_logged_in.html.erb within layouts/application
+  Rendered staticpages/top_logged_in.html.erb within layouts/application (Duration: 0.3ms | Allocations: 234)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 154)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 970)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 2312)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 13:36:43 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (0.5ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:3:in `index'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 251)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.9ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1842)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.9ms | Allocations: 2979)
+
+
+Started GET "/articles/21/explanation" for ::1 at 2024-05-27 13:36:44 +0900
+Processing by ArticlesController#explanation as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `explanation'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/explanation.html.erb within layouts/application
+  Rendered articles/explanation.html.erb within layouts/application (Duration: 0.1ms | Allocations: 81)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1695)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 2374)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 13:36:45 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (0.5ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:3:in `index'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 251)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1887)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.8ms | Allocations: 3023)
+
+
+Started GET "/" for ::1 at 2024-05-27 13:36:49 +0900
+Processing by StaticpagesController#top as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top_logged_in.html.erb within layouts/application
+  Rendered staticpages/top_logged_in.html.erb within layouts/application (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 152)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 784)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 1899)
+
+
+Started GET "/practices/new" for ::1 at 2024-05-27 13:36:51 +0900
+Processing by PracticesController#new as HTML
+  [1m[36mArticle Pluck (0.2ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/practices_controller.rb:5:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering practices/new.html.erb within layouts/application
+  Rendered practices/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1549)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 581)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2702)
+Completed 200 OK in 15ms (Views: 3.4ms | ActiveRecord: 4.6ms | Allocations: 12267)
+
+
+Started POST "/practices" for ::1 at 2024-05-27 13:36:54 +0900
+Processing by PracticesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "practice"=>{"difficulty_level"=>"medium"}, "commit"=>"Start"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/practices_controller.rb:10:in `create'
+  [1m[36mPractice Create (1.2ms)[0m  [1m[32mINSERT INTO "practices" ("user_id", "start_time", "end_time", "score", "difficulty_level", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 3], ["start_time", "2024-05-27 04:36:54.774627"], ["end_time", nil], ["score", nil], ["difficulty_level", "medium"], ["created_at", "2024-05-27 04:36:54.777104"], ["updated_at", "2024-05-27 04:36:54.777104"]]
+  ↳ app/controllers/practices_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/practices_controller.rb:10:in `create'
+Redirected to http://localhost:3000/practices/67
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms | Allocations: 5849)
+
+
+Started GET "/practices/67" for ::1 at 2024-05-27 13:36:54 +0900
+Processing by PracticesController#show as HTML
+  Parameters: {"id"=>"67"}
+  [1m[36mPractice Load (0.4ms)[0m  [1m[34mSELECT "practices".* FROM "practices" WHERE "practices"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:19:in `show'
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."difficulty_level" = $1 ORDER BY RANDOM() LIMIT $2[0m  [["difficulty_level", "medium"], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:20:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering practices/show.html.erb within layouts/application
+  Rendered practices/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 479)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 2087)
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.9ms | Allocations: 4128)
+
+
+Started GET "/correct.mp3" for ::1 at 2024-05-27 13:36:54 +0900
+Started GET "/practices/new_word?difficulty_level=medium" for ::1 at 2024-05-27 13:36:54 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/correct.mp3"):
+  
+Processing by PracticesController#new_word as */*
+  Parameters: {"difficulty_level"=>"medium"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."difficulty_level" = $1 ORDER BY RANDOM() LIMIT $2[0m  [["difficulty_level", "medium"], ["LIMIT", 1]]
+  ↳ app/controllers/practices_controller.rb:24:in `new_word'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2318)
+
+
+Started GET "/practices/new" for ::1 at 2024-05-27 13:36:57 +0900
+Processing by PracticesController#new as HTML
+  [1m[36mArticle Pluck (0.4ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/practices_controller.rb:5:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering practices/new.html.erb within layouts/application
+  Rendered practices/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 772)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 1.7ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 1933)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.6ms | Allocations: 2578)
+
+
+Started GET "/" for ::1 at 2024-05-27 13:37:02 +0900
+Processing by StaticpagesController#top as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering staticpages/top_logged_in.html.erb within layouts/application
+  Rendered staticpages/top_logged_in.html.erb within layouts/application (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 152)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 784)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.1ms | Allocations: 1925)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 13:37:03 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (0.5ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:3:in `index'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 251)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1842)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.8ms | Allocations: 2978)
+
+
+Started GET "/articles/21/explanation" for ::1 at 2024-05-27 13:37:07 +0900
+Processing by ArticlesController#explanation as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `explanation'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/explanation.html.erb within layouts/application
+  Rendered articles/explanation.html.erb within layouts/application (Duration: 0.1ms | Allocations: 81)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 593)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1698)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.4ms | Allocations: 2376)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 13:37:14 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (0.5ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:3:in `index'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 251)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1854)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.7ms | Allocations: 2989)
+
+
+Started GET "/articles/23/explanation" for ::1 at 2024-05-27 13:37:15 +0900
+Processing by ArticlesController#explanation as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `explanation'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/explanation.html.erb within layouts/application
+  Rendered articles/explanation.html.erb within layouts/application (Duration: 0.1ms | Allocations: 66)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1659)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 2337)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 13:37:16 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (0.4ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:3:in `index'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 251)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1857)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.7ms | Allocations: 2992)
+
+
+Started GET "/articles/22/explanation" for ::1 at 2024-05-27 13:37:18 +0900
+Processing by ArticlesController#explanation as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `explanation'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/explanation.html.erb within layouts/application
+  Rendered articles/explanation.html.erb within layouts/application (Duration: 0.1ms | Allocations: 61)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1663)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 2341)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 13:37:19 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (0.4ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:3:in `index'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 251)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1842)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.8ms | Allocations: 2977)
+
+
+Started GET "/articles/22/explanation" for ::1 at 2024-05-27 13:37:21 +0900
+Processing by ArticlesController#explanation as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `explanation'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/explanation.html.erb within layouts/application
+  Rendered articles/explanation.html.erb within layouts/application (Duration: 0.1ms | Allocations: 61)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1669)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 2347)
+
+
+Started GET "/articles" for ::1 at 2024-05-27 13:37:22 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Pluck (0.4ms)[0m  [1m[34mSELECT DISTINCT "articles"."difficulty_level" FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:3:in `index'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:4:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 251)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 578)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1872)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.7ms | Allocations: 3007)
+
+
